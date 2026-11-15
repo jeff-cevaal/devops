@@ -17,7 +17,7 @@ jobs:
             backend:
               - 'src/backend/**'
               - '.github/workflows/backend-tests.yaml'
-
+  
   test:
     name: Test Backend
     needs: check_paths
@@ -73,3 +73,16 @@ jobs:
           header: test-coverage
           recreate: true
           path: code-coverage-results.md
+
+      - name: Build Docker image
+        run: docker build -t backend-app:latest .
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: "backend-app:latest"
+          format: 'table'
+          exit-code: '0'
+          ignore-unfixed: true
+          vuln-type: 'os,library'
+          severity: 'CRITICAL,HIGH'
