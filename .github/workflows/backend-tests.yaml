@@ -9,7 +9,7 @@ jobs:
     outputs:
       should_run: ${{ steps.filter.outputs.backend }}
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
       - uses: dorny/paths-filter@v4.0.3
         id: filter
         with:
@@ -29,10 +29,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v7
+        uses: actions/checkout@v7.0.1
 
       - name: Install UV
-        uses: astral-sh/setup-uv@v10
+        uses: astral-sh/setup-uv@v10.3.3
 
       - name: Set up Python
         run: uv python install
