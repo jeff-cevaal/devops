@@ -22,6 +22,15 @@ study-tracker-api = "backend.main:main"
 [tool.pytest.ini_options]
 asyncio_default_fixture_loop_scope = "function"
 
+[tool.ruff]
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["backend"]
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/backend"]
 
