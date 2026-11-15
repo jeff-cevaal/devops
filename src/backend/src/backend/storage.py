@@ -116,6 +116,7 @@ def get_statistics() -> Stats:
     )
 
     logger.info(
-        f"Calculated statistics: {total_minutes} minutes across {len(sessions)} sessions"
+        f"Calculated statistics: {total_minutes} minutes "
+        f"across {len(sessions)} sessions"
     )
     return stats
