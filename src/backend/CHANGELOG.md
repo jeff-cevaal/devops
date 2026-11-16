@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/jeff-cevaal/devops/compare/backend-v0.2.0...backend-v0.3.0) (2026-11-16)
+
+
+### Features
+
+* **backend:** added container image building and pushing ([#9](https://github.com/jeff-cevaal/devops/issues/9)) ([3e8752b](https://github.com/jeff-cevaal/devops/commit/3e8752b5aff302a4afaafe30b01140307c49c024))
+
 ## [0.2.0](https://github.com/jeff-cevaal/devops/compare/backend-v0.1.0...backend-v0.2.0) (2026-11-16)
 
 
