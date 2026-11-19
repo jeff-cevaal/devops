@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@7.0.1
+        uses: actions/checkout@v7.0.1
 
       - name: Install K3d
         uses: nolar/setup-k3d-k3s@v1.1.0
